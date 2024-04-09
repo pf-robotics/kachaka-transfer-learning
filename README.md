@@ -1,6 +1,6 @@
-### 環境準備
+### PCでの環境準備
 
-* 以下のコマンドを実行し、必要なpythonモジュールをインストールして下さい。
+* 適当な手元のPCで以下のコマンドを実行し、必要なpythonモジュールをインストールして下さい。
 
 ```
 python3 -m venv venv
@@ -11,15 +11,15 @@ pip install -r requirements.txt
 
 ### データセット準備
 
-* [ノートブック](https://github.com/pf-robotics/kachaka-api/blob/master/python/demos/save_object_detection_features.ipynb)に従い、必要なデータを取得して下さい。
+* [ノートブック](https://github.com/pf-robotics/kachaka-api/blob/master/python/demos/save_object_detection_features.ipynb)に従い、カチャカ体内で必要なデータを取得して下さい。
 
-* [アノテーションツール](https://github.com/jsbroks/coco-annotator.git)を立ち上げ、お好きなブラウザで http://localhost:5000/ でアクセスします(※ ポート被りがある場合はポート番号が変わります)。
+* 手元のPCで [アノテーションツール](https://github.com/jsbroks/coco-annotator.git)を立ち上げ、お好きなブラウザで http://localhost:5000/ でアクセスします(※ ポート被りがある場合はポート番号が変わります)。
 ```
 git clone https://github.com/jsbroks/coco-annotator.git
 cd coco-annotator && sudo docker-compose up
 ```
 
-* ユーザー作成・ログイン後、データセットを１つ作成し、ノートブックで取得したデータをコピーして下さい。
+* ユーザー作成・ログイン後、データセットを１つ作成し、ノートブックで取得したデータを手元のPCにコピーして下さい。
 
 ```
 scp -P 26500 kachaka@<カチャカのIPアドレス>:kachaka-api/python/demos/data/* coco-annotator/datasets/<作成したデータセットの名前>/
