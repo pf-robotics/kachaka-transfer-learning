@@ -1,0 +1,7 @@
+click
+onnx
+onnxruntime
+opencv-python
+torch
+torchvision
+tqdm
